@@ -1,0 +1,1 @@
+sudo /home/fujii/spark-2.1.0-bin-hadoop2.7/bin/spark-submit --class test.spark.TestSpark20170414 /home/fujii/spark-2.1.0-bin-hadoop2.7/app/jar/TestSpark20170320.jar
