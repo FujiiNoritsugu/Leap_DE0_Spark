@@ -1,0 +1,29 @@
+/dts-v1/; /plugin/;
+/ {
+    fragment@1 {
+        target-path = "/soc/base-fpga-region";
+        #address-cells = <1>;
+        #size-cells = <1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <1>;
+            firmware-name = "Test20180911.rbf";
+        };
+    };
+    fragment@2 {
+        target-path = "/soc";
+        #address-cells = <1>;
+        #size-cells = <1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <1>;
+                memory_socket@ff200000 {
+                        compatible = "memory_socket,memory_socket-1.0";
+                        minor-number = <0>;
+                        reg = <0xff200000 0x100>;
+                        interrupts = <0 40 1>;
+                };
+        };
+    };
+};
+
